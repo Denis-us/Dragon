@@ -6,26 +6,24 @@
 
 .img {
     position: relative;
-    height: 500px;
+    height: 200px;
     border-radius: 10px;
 }
 
 .btnLeft {
     position: absolute;
-    width: 250px;
-    height: 500px;
-    left: 50px;
+    left: 25px;
     font-size: 3rem;
     cursor: pointer;
+    z-index: 5;
 }
 
 .btnRight {
     position: absolute;
-    width: 250px;
-    height: 500px;
-    right: 50px;
+    right: 25px;
     font-size: 3rem;
     cursor: pointer;
+    z-index: 5;
 }
 
 .btnLeft:hover .arrowLeft {
@@ -37,13 +35,13 @@
 }
 
 .arrowLeft {
-    width: 50px;
+    width: 35px;
     rotate: 180deg;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .arrowRight {
-    width: 50px;
+    width: 35px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -57,3 +55,42 @@
     transition-duration: 1s;
 }
 
+@media screen and (min-width: 772px) {
+    .img {
+        height: 380px;
+    }
+    .btnLeft {
+        width: 90px;
+        height: 400px;
+    }
+    .btnRight {
+        width: 90px;
+        height: 400px;
+    }
+    .arrowLeft {
+        width: 50px;
+    }
+    .arrowRight {
+        width: 50px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .img {
+        height: 500px;
+    }
+    .btnLeft {
+        width: 200px;
+        height: 500px;
+    }
+    .btnRight {
+        width: 200px;
+        height: 500px;
+    }
+    .arrowLeft {
+        width: 60px;
+    }
+    .arrowRight {
+        width: 60px;
+    }
+}

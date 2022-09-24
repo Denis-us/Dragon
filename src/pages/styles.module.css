@@ -1,6 +1,6 @@
 .btn {
     position: absolute;
-    font-size: 15px;
+    font-size: 12px;
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -10,6 +10,26 @@
 
 .btn:hover,
 .btn:focus {
-    font-size: 20px;
+    font-size: 15px;
     background-color: #ebe379;
+}
+
+@media screen and (min-width: 772px) {
+    .btn {
+        font-size: 15px;
+    }
+    .btn:hover,
+    .btn:focus {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .btn {
+        font-size: 17px;
+    }
+    .btn:hover,
+    .btn:focus {
+        font-size: 20px;
+    }
 }
