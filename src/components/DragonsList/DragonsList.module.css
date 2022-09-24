@@ -1,0 +1,37 @@
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.listEl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.listEl:hover,
+.listEl:focus {
+    background-color: inherit;
+}
+
+.listEl:hover .img,
+.listEl:focus .img {
+    width: 400px;
+    z-index: 5;
+}
+
+.img {
+    width: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
