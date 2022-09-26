@@ -4,20 +4,10 @@ import authOperations from '../redux/auth/authOperations'
 import Form from '../components/Form'
 // import {useRegisterMutation} from '../redux/authApi';
 
-const LoginPage = () => {
+const RegisterPage = () => {
     // const [registration] = useRegisterMutation();
-    const dispatch = useDispatch()
     // const [newUser, setNewUser] = useState({})
     // console.log(newUser)
-
-    const handleLoginUser = async values => {
-        try {
-            await dispatch(authOperations.login(values))
-          }
-        catch (error) {
-          console.log(error)
-        }
-  }
 
     // const handleSubmit = async (value) => {
     //     setNewUser(value)
@@ -26,11 +16,22 @@ const LoginPage = () => {
     //     }
     // }
 
+    const dispatch = useDispatch()
+
+    const handleAddUser = async values => {
+        try {
+            await dispatch(authOperations.registration(values))
+          }
+        catch (error) {
+          console.log(error)
+        }
+  }
+
     return (
         <>
-            <Form onSubmit={handleLoginUser}/>
+            <Form onSubmit={handleAddUser}/>
         </>
     )
 }
 
-export default LoginPage
+export default RegisterPage
