@@ -3,7 +3,8 @@ body {
   font-family: 'Encode Sans Expanded', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #dadde4;
+  background-image: url(./images/space.jpg);
+  color: #1577e7;
 }
 
 code {
@@ -27,8 +28,28 @@ button {
 
 a {
   text-decoration: none;
+  color: #ee730f;
+  cursor: pointer;
 }
 
 p {
   margin: 0;
+}
+
+.link {
+  position: relative;
+  padding: 15px;
+  font-size: large;
+  color: #1577e7;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  color: #ee730f;
+}
+
+.activeLink {
+  font-size: large;
+  padding: 15px;
+  color: #ee730f;
 }

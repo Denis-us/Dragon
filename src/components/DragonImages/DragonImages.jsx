@@ -4,7 +4,7 @@ import s from './DragonImages.module.css'
 
 const DragonImages = ({images}) => {
     const [currentImg, setCurrentImg] = useState(0)
-    const length = images.length
+    const length = images?.length
 
     const nextImg = () => {
         setCurrentImg(currentImg === length - 1 ? 0 : currentImg + 1)

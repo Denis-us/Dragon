@@ -9,11 +9,11 @@ const DragonsList = ({data}) => {
         {data?.map(dragon => (
             <li key={dragon.id} className={s.listEl}>
                 <Link to={dragon.id}>
-                    <img src={dragon.flickr_images[0]} alt={dragon.id} className={s.img}/>
+                    {dragon.flickr_images && <img src={dragon.flickr_images[0]} alt={dragon.id} className={s.img}/>}
                 </Link>
             </li>
-          ))}
-          </ul>
+        ))}
+        </ul>
     )
 }
 

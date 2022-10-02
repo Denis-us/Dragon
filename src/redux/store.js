@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit"
-// import { authApi } from './authApi';
-import {dragonsApi} from './dragonsApi'
-import {oneDragonApi} from './oneDragonApi'
+import {dragonsApi} from './api/dragonsApi'
+import {oneDragonApi} from './api/oneDragonApi'
+import {favouritesSlice} from './favourite/favouritesSlice'
 import authReducer from './auth/authSlice';
 import {
     persistStore,
@@ -27,7 +27,7 @@ export const store = configureStore({
         auth: persistReducer(authPersistConfig, authReducer),
         [dragonsApi.reducerPath]: dragonsApi.reducer,
         [oneDragonApi.reducerPath]: oneDragonApi.reducer,
-        // [authApi.reducerPath]: authApi.reducer
+        favouritesDragons: favouritesSlice.reducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(dragonsApi.middleware)
 })

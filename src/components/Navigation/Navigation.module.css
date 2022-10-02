@@ -1,0 +1,40 @@
+.nav {
+    /* display: flex; */
+    /* align-items: center; */
+    border-bottom: 2px solid #1577e7;
+    height: 40px;
+    padding: 10px 20px;
+    /* margin: 0px 100px 0px 100px  */
+}
+
+.authNav {
+    margin: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userMenu {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.userText {
+    font-size: large;
+}
+
+button.button {
+    font-family: 'Dancing Script', cursive;
+    font-size: medium;
+    margin-left: 30px;
+}

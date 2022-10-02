@@ -13,32 +13,32 @@ const token = {
     }
 }
 
-const registration = createAsyncThunk('auth/register', async credentials => {
+const register = createAsyncThunk('auth/register', async credentials => {
     try {
         const {data} = await axios.post('/api/auth/register', credentials)
         token.set(data.token)
         return data
     } catch (error) {
-
+        console.log(error)
     }
 })
 
 const login = createAsyncThunk('auth/login', async credentials => {
     try {
-        const {data} = await axios.post('/api/auth//login', credentials)
+        const {data} = await axios.post('/api/auth/login', credentials)
         token.set(data.token)
         return data
     } catch (error) {
-
+        console.log(error)
     }
 })
 
 const logout = createAsyncThunk('auth/logout', async () => {
     try {
-        await axios.post('/api/auth//logout')
+        await axios.post('/api/auth/logout')
         token.unset()
     } catch (error) {
-
+        console.log(error)
     }
 })
 
@@ -54,7 +54,6 @@ const getCurrentUser = createAsyncThunk('auth/refresh', async (_, {getState, rej
 
     try {
         const {data} = await axios.get('/users/current')
-        console.log(data)
         return data
     } catch (error) {
         rejectWithValue(error.message)
@@ -64,6 +63,6 @@ const getCurrentUser = createAsyncThunk('auth/refresh', async (_, {getState, rej
     
 })
 
-const authOperations = {registration, login, logout, getCurrentUser}
+const authOperations = {register, login, logout, getCurrentUser}
 
 export default authOperations

@@ -1,10 +1,10 @@
 import React from 'react'
 import s from './Title.module.css'
 
-const Title = ({title}) => {
+const Title = ({children}) => {
 
     return (
-        <h1 className={s.title}>{title}</h1>
+        <h1 className={s.title}>{children}</h1>
     )
 }
 
